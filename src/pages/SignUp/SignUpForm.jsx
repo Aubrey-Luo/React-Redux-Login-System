@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import api from '../../api'
 
 export default class SignUpForm extends Component {
   /**
@@ -18,6 +19,16 @@ export default class SignUpForm extends Component {
   onSubmit = (e) => {
     e.preventDefault()
     console.log(this.state)
+    api.register({
+      username: this.state.username,
+      email: this.state.email,
+      password: this.state.password,
+      passwordconfirmation: this.state.passWordConfirmation
+    }).then(res => {
+      console.log(res.data)
+    }).catch(error => {
+      console.log(error)
+    })
   }
 
   changeHandle = (e) => {
@@ -44,8 +55,8 @@ export default class SignUpForm extends Component {
               className='form-control'
               type='text'
               name='username'
-              value={ username }
-              onChange={ this.changeHandle }
+              value={username}
+              onChange={this.changeHandle}
             />
           </div>
           <div className='form-group'>
@@ -54,8 +65,8 @@ export default class SignUpForm extends Component {
               className='form-control'
               type='text'
               name='email'
-              value={ email }
-              onChange={ this.changeHandle }
+              value={email}
+              onChange={this.changeHandle}
             />
           </div>
           <div className='form-group'>
@@ -64,8 +75,8 @@ export default class SignUpForm extends Component {
               className='form-control'
               type='password'
               name='password'
-              value={ password }
-              onChange={ this.changeHandle }
+              value={password}
+              onChange={this.changeHandle}
             />
           </div>
           <div className='form-group'>
@@ -74,8 +85,8 @@ export default class SignUpForm extends Component {
               className='form-control'
               type='password'
               name='passWordConfirmation'
-              value={ passWordConfirmation }
-              onChange={ this.changeHandle }
+              value={passWordConfirmation}
+              onChange={this.changeHandle}
             />
           </div>
           <div className='form-group'>

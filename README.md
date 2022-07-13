@@ -17,4 +17,10 @@ npm install --save-dev redux-devtools-extension
 Bootstrap 是最受欢迎的 HTML、CSS 和 JS 框架，用于开发响应式布局、移动设备优先的 WEB 项目。
 
 ## 使用Validator
-参考网址：https://wangchujiang.com/validator.js/#document
+参考网址：https://github.com/validatorjs/validator.js
+
+## 跨域解决方案
+1. 后台：CORS第三方
+    npm install --save cors
+2. 前台：设置跨域代理
+    参考地址：https://github.com/facebook/create-react-app/blob/main/docusaurus/docs/proxying-api-requests-in-development.md
