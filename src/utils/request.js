@@ -39,7 +39,7 @@ const errorHandle = (status, info) => {
 
 const instance = axios.create({
     // 公共配置
-    baseURL:"http://iwenwiki.com",
+    // baseURL:"http://iwenwiki.com",
     timeout: 5000
 })
 

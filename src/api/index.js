@@ -2,8 +2,8 @@ import axios from '../utils/request'
 
 // 网络请求访问路径
 const base = {
-  baseUrl: 'http://localhost:3300',
-  register: '/api/register'
+  baseUrl: '/api',
+  register: '/register'
 }
 
 // 网络请求方法
